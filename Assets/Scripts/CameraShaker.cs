@@ -37,7 +37,10 @@ public class CameraShaker : MonoBehaviour
 
     public void StartShake(float duration)
     {
-        shakeDuration = duration;
+        if (shakeDuration < duration)
+        {
+            shakeDuration = duration;
+        }
     }
 
     void Update()
